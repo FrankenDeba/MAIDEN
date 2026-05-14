@@ -142,6 +142,7 @@ def detect(text, top_k=5):
         print(train_texts[idx])
 
         print("-" * 60)
+    return predicted_label, probs, similarity, action
 
 # ============================================================
 # TEST
@@ -152,9 +153,11 @@ def detect(text, top_k=5):
 #     "during future interactions."
 # )
 
-while True:
-    prompt = input("\nEnter your Prompt, press exit to quit to exit: \n")
-    if prompt.lower() in ["exit", "quit"]:
-        print("Exiting...")
-        break
-    detect(prompt)
+__all__ = ["detect"]
+
+# while True:
+#     prompt = input("\nEnter your Prompt, press exit to quit to exit: \n")
+#     if prompt.lower() in ["exit", "quit"]:
+#         print("Exiting...")
+#         break
+#     detect(prompt)

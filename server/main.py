@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from minja_infer import detect
+# from minja_infer import detect
+
+from services.forward import forward
 app = FastAPI()
 
 class InferenceRequest(BaseModel):
@@ -16,6 +18,6 @@ def infer(request: InferenceRequest):
     # Placeholder for inference logic
     response = {
         "input": request.prompt,
-        "output": f"Echo: {detect(request.prompt)}"
+        "output": f"Echo: {forward(request.prompt)}"
     }
     return response

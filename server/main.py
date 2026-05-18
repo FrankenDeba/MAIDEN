@@ -15,7 +15,20 @@ app = FastAPI(
     description="Dual-endpoint API routing clean traffic to Cloud LLMs or local SLMs after threat filtering."
 )
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+from fastapi.middleware.cors import CORSMiddleware
+
+# Define the origins that are allowed to make requests to your API
+origins = [
+    "http://localhost:3000",  # Common React port
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,            # List of allowed origins
+    allow_credentials=True,           # Allow cookies and auth headers
+    allow_methods=["*"],              # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],              # Allow all headers
+)
 
 class InferenceRequest(BaseModel):
     prompt: str

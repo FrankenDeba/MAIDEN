@@ -1,4 +1,4 @@
-# MAIDEN — Memory Injection & Jailbreak Analyzer
+# MAIDEN — Memory Attack Interceptor & Detection ENgine
 
 MAIDEN is an AI security platform designed to detect, analyze, and mitigate:
 

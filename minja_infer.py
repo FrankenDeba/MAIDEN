@@ -23,7 +23,9 @@ MODEL_PATH = "./minja-bge-base-finetuned"
 
 print("[+] Loading fine-tuned model...")
 
-model = SentenceTransformer(MODEL_PATH)
+model = SentenceTransformer("deba2012ddx/minja_bge_ft")
+
+# SentenceTransformer(MODEL_PATH)
 
 # ============================================================
 # LOAD CLASSIFIER

@@ -9,7 +9,7 @@ def ask_llm(prompt):
     print("[!] Sending prompt to LLM...")
     print(f"Prompt: {prompt}")
 
-    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    client = Groq(api_key=os.getenv("gsk_YOUR_ACTUAL_API_KEY_HERE"))
     completion = client.chat.completions.create(
         model="openai/gpt-oss-120b",
         messages=[

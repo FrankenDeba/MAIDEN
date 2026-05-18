@@ -1,1 +1,5 @@
 .env
+minja-bge-base-finetuned/
+__pycache__/
+*.pkl
+*.index

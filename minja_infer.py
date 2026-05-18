@@ -21,6 +21,12 @@ JUDGE_MODEL = "phi3"
 # Anything below this is Green. Anything above is Red (Send to SLM).
 BGE_RED_FLAG_THRESHOLD = 0.60 
 
+print("[+] Loading fine-tuned model...")
+
+model = SentenceTransformer("deba2012ddx/minja_bge_ft")
+
+# SentenceTransformer(MODEL_PATH)
+
 # ============================================================
 # LOAD BGE ML ASSETS
 # ============================================================

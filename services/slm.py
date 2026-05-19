@@ -69,7 +69,7 @@ def query_slm(prompt: str) -> str:
     inputs = tokenizer(
         input_text,
         return_tensors = "pt",
-    ).to("cuda")
+    )
 
     outputs = model.generate(
         **inputs,
